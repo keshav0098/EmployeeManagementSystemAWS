@@ -6,13 +6,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class EmployeeManagementSystemAwsApplication extends SpringBootServletInitializer{
+public class EmployeeManagementSystemAwsApplication{
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-	
-		return builder.sources(EmployeeManagementSystemAwsApplication.class);
-	}
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeManagementSystemAwsApplication.class, args);
 	}

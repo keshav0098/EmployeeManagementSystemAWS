@@ -23,6 +23,14 @@ public class EmployeeController {
 		return employeeRepository.dummyDatabaseForEmployee();
 	}
 	
+	@GetMapping("/welcome")
+	public String welcomeMessage()
+	{
+		
+		return "Wecome to TCS employee management system!!";
+	}
+	
+	
 	@GetMapping("/employees/{id}")
 	public Employee getEmployeeByID(@PathVariable("id") int id)
 	{
