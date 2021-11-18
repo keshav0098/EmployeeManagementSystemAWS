@@ -1,6 +1,8 @@
 package com.keshav.ems.aws.controller;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +22,7 @@ public class EmployeeController {
 	public List<Employee> getAllEmployees()
 	{
 		
-		return employeeRepository.dummyDatabaseForEmployee();
+		return employeeRepository.dummyDatabaseForEmployee().stream().sorted(Comparator.comparing(Employee::getEmpID).reversed()).collect(Collectors.toList());
 	}
 	
 	@GetMapping("/welcome")
