@@ -40,4 +40,15 @@ public class EmployeeController {
 		Employee employee = employeeRepository.dummyDatabaseForEmployee().stream().filter(emp -> emp.getEmpID()==id).findAny().get();
 		return employee;
 	}
+	
+	
+	@GetMapping("/salary/{sal}")
+	public List<Employee> getEmployeeBySal(@PathVariable("sal") int salary)
+	{
+		
+		return employeeRepository.dummyDatabaseForEmployee().stream().filter(emp -> emp.getSalary()==salary).collect(Collectors.toList());
+	}
+	
+	
+	
 }

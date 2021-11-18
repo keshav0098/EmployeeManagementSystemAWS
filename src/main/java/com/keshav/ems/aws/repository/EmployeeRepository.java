@@ -14,7 +14,7 @@ public class EmployeeRepository {
 	static List<Employee> employees=new ArrayList<>();
 	static
 	{
-		employees.add(new Employee(1, "Keshav", 30000, "FS"));
+		employees.add(new Employee(1, "Keshav", 40000, "FS"));
 		employees.add(new Employee(2, "Harshit", 50000, "CC"));
 		employees.add(new Employee(7, "Vijit", 40000, "LU"));
 		employees.add(new Employee(15, "Ankit", 10000, "GE"));
